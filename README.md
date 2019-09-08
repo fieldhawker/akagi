@@ -55,12 +55,12 @@ If you use it production environment, you must replace `settings.SECRET_KEY`.
 
 ## Command
 
-image-collector
+image-collector　画像収集
 https://github.com/skmatz/image-collector
 
 python image_collector.py -t 佐倉綾音 -n 10 -d sakura_images
 
-face
+img_face_dt 画像から顔を切り出し
 https://qiita.com/kerobot/items/e3abe3f21808b4b584bd
 
 python img_face_dt.py
@@ -68,7 +68,10 @@ python img_face_dt.py
  IMAGE_PATH_PATTERN = "./sakura_images/*"
  OUTPUT_IMAGE_DIR = "./face_image"
 
- 出力先ディレクトリも先に作っておく
- cd command
- mkdir face_image
+img_data_gen 画像を水増し
+https://qiita.com/kerobot/items/54bc1224424280150d1c
 
+python img_data_gen.py
+ 実行時は以下のパスを任意に書き換えて実行
+ IMAGE_PATH_PATTERN = "./face_image/*"
+ OUTPUT_IMAGE_DIR = "./face_scratch_image"
