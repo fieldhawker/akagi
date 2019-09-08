@@ -6,6 +6,8 @@ import numpy as np
 from PIL import Image
 from keras.backend import tensorflow_backend as backend
 from django.conf import settings
+import logging
+
 
 def detect(upload_image):
     result_name = upload_image.name

@@ -1,5 +1,6 @@
 {% extends 'face/base.html' %}
 {% block content %}
+<div class="container">
 <div style="padding:1em;">
     <div class="page-header">
         <h1>kerasで深層学習　<small>Gacktかオードリー春日のどちらかに分類してみる</small></h1>
@@ -34,5 +35,6 @@
             <img src="data:image/png;base64,{{result_img}}"/>
         {% endif %}
     </div>
+</div>
 </div>
 {% endblock %}
