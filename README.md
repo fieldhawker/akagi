@@ -104,4 +104,11 @@ https://qiita.com/kerobot/items/1ce75622d173d231d423
 
 python img_decide.py 853620.jpeg
 python img_decide.py tmp/000019_002.jpg
+python img_decide.py tmp/010008_002.jpg
 
+
+from .cv2 import *
+ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+
+herokuではlibSM.so.6がないようなので, 入れる
+https://qiita.com/haru1843/items/210cb08024195b9d1bc8
