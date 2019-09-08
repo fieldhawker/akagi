@@ -59,3 +59,16 @@ image-collector
 https://github.com/skmatz/image-collector
 
 python image_collector.py -t 佐倉綾音 -n 10 -d sakura_images
+
+face
+https://qiita.com/kerobot/items/e3abe3f21808b4b584bd
+
+python img_face_dt.py
+ 実行時は以下のパスを任意に書き換えて実行
+ IMAGE_PATH_PATTERN = "./sakura_images/*"
+ OUTPUT_IMAGE_DIR = "./face_image"
+
+ 出力先ディレクトリも先に作っておく
+ cd command
+ mkdir face_image
+
