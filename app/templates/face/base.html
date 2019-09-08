@@ -13,17 +13,12 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     
 </head>
 
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-light ">
     <a class="navbar-brand" href="{% url 'top' %}">イケダアイ</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
-            aria-expanded="false"
-            aria-label="ナビゲーションの切替">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -31,16 +26,6 @@
 {% block content %}
 {% endblock %}
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"
-        charset="UTF-8">></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.ja.min.js"></script>
-<script src="{% static "app/js/plugins/responsive-paginate.js" %}"></script>
-<script src="{% static "app/js/app.js" %}"></script>
 </body>
 
 </html>
