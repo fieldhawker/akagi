@@ -53,3 +53,9 @@ If you use it production environment, you must replace `settings.SECRET_KEY`.
 ## Author
 
 
+## Command
+
+image-collector
+https://github.com/skmatz/image-collector
+
+python image_collector.py -t 佐倉綾音 -n 10 -d sakura_images
