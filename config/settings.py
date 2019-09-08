@@ -210,3 +210,7 @@ if not DEBUG:
 
 db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
+
+# 顔判定用
+CASCADE_FILE_PATH = os.path.join(BASE_DIR, 'haarcascade_frontalface_default.xml')
+MODEL_FILE_PATH = os.path.join(BASE_DIR, 'model.h5')

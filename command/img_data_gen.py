@@ -10,9 +10,13 @@ import numpy as np
 # Test Image Directory
 TEST_IMAGE_PATH = "./test_image"
 # Face Image Directory
-IMAGE_PATH_PATTERN = "./face_image/*"
+#IMAGE_PATH_PATTERN = "./face_image/*"
+#IMAGE_PATH_PATTERN = "./face_image/gackt/*"
+IMAGE_PATH_PATTERN = "./face_image/オードリー春日/*"
 # Output Directory
-OUTPUT_IMAGE_DIR = "./face_scratch_image"
+#OUTPUT_IMAGE_DIR = "./face_scratch_image"
+#OUTPUT_IMAGE_DIR = "./face_scratch_image/gackt"
+OUTPUT_IMAGE_DIR = "./face_scratch_image/オードリー春日"
 
 def load_name_images(image_path_pattern):
     name_images = []

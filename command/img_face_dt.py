@@ -6,9 +6,13 @@ import cv2
 
 
 # Origin Image Pattern
-IMAGE_PATH_PATTERN = "./sakura_images/佐倉綾音/*"
+#IMAGE_PATH_PATTERN = "./sakura_images/佐倉綾音/*"
+#IMAGE_PATH_PATTERN = "./google_images/Gackt/*"
+IMAGE_PATH_PATTERN = "./google_images/オードリー春日/*"
 # Output Directory
-OUTPUT_IMAGE_DIR = "./face_image"
+#OUTPUT_IMAGE_DIR = "./face_image"
+#OUTPUT_IMAGE_DIR = "./face_image/gackt"
+OUTPUT_IMAGE_DIR = "./face_image/オードリー春日"
 
 CASCADE_FILE = "haarcascade_frontalface_default.xml"
 
