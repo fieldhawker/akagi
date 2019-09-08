@@ -177,7 +177,7 @@ LOGGING = {
     },
     'loggers': {
         # 自作アプリケーション全般のログを拾う
-        '': {
+        'main': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': False,
@@ -203,8 +203,9 @@ try:
 except ImportError:
     pass
 
-if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+# if not DEBUG:
+if DEBUG:
+    # SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
     django_heroku.settings(locals())
 

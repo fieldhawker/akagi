@@ -17,6 +17,9 @@ from .forms import ImageForm
 from .face import detect
 
 
+import logging
+
+
 # 未ログインのユーザーにアクセスを許可する場合は、LoginRequiredMixinを継承から外してください。
 #
 # LoginRequiredMixin：未ログインのユーザーをログイン画面に誘導するMixin
@@ -46,6 +49,8 @@ class ItemFilterView(LoginRequiredMixin, FilterView):
         セッション変数の管理:一覧画面と詳細画面間の移動時に検索条件が維持されるようにする。
         """
 
+        logger = logging.getLogger('django')
+        logger.info('ItemFilterView.get request.')
         # 一覧画面内の遷移(GETクエリがある)ならクエリを保存する
         if request.GET:
             request.session['query'] = request.GET
@@ -158,8 +163,14 @@ class FaceView(TemplateView):
 
     # GETリクエスト（index.htmlを初期表示）
     def get(self, req):
-        return render(req, 'face/index.html', self.params)
-
+        try:
+            logger = logging.getLogger('django')
+            logger.info('FaceView.get request.')
+            return render(req, 'face/index.html', self.params)
+        except:
+            import traceback
+            traceback.print_exc()
+        
     # POSTリクエスト（index.htmlに結果を表示）
     def post(self, req):
         # POSTされたフォームデータを取得
