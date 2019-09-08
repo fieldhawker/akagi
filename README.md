@@ -75,3 +75,13 @@ python img_data_gen.py
  実行時は以下のパスを任意に書き換えて実行
  IMAGE_PATH_PATTERN = "./face_image/*"
  OUTPUT_IMAGE_DIR = "./face_scratch_image"
+
+img_model_gen 顔分類モデルの生成
+https://qiita.com/kerobot/items/be4fd1a166073fbcff38
+
+python img_model_gen.py
+ 実行時は以下のパスを任意に書き換えて実行
+ TEST_IMAGE_DIR = "./test_image"
+ TRAIN_IMAGE_DIR = "./face_scratch_image"
+ OUTPUT_MODEL_DIR = "./model"
+
