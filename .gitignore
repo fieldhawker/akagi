@@ -2,3 +2,8 @@ __pycache__
 db.sqlite3
 .DS_Store
 local_settings.py
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
