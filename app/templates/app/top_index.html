@@ -1,0 +1,22 @@
+{% extends "./_base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <div class="list-group">
+                <a href="{% url 'style_transfer_video' %}" class="list-group-item list-group-item-action">StyleTransferVideo</a>
+                <a href="#" class="list-group-item list-group-item-action">プロフィール</a>
+                <a href="#" class="list-group-item list-group-item-action active">アクティブ</a>
+                <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"
+                    aria-disabled="true">無効</a>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+</div>
+    {% endblock %}

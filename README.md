@@ -1,9 +1,26 @@
 akagi
 ====
 
-SEP勉強会用のDDjangoアプリケーション
+SEP勉強会用のDjangoアプリケーション
+
+参考：
+[Python] プログラム初心者のためのWebアプリ簡単作成法
+https://qiita.com/okoppe8/items/4cc0f87ea933749f5a49
+
+リポジトリ：
+https://github.com/fieldhawker/akagi
 
 [Qiita: [Python] テンプレートアプリを使った業務用Webアプリケーション高速開発法の紹介【チュートリアル形式】](https://qiita.com/okoppe8/items/4cc0f87ea933749f5a49)
+
+環境構築
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser 
+
+起動
+python manage.py runserver
 
 ## Requirement
 

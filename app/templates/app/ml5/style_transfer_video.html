@@ -1,0 +1,44 @@
+{% extends "../_base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <h1>Style Transfer Mirror Example using p5.js</h1>
+            <p>Sytle: Udnie (Young American Girl, The Dance), 1913 - Francis Picabia</p>
+            <p id='status'>Loading model...</p>
+
+            <p><button id="startStop">Start</button></p>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+            <img width="100%" src="{% static "app/js/ml5/style_transfer_video/images/udnie.jpg" %}" />
+        </div>
+        <div class="col-sm-4">
+            <div id="canvasContainer"></div>
+            <br />
+        </div>
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+<script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
+
+<script src="{% static "app/js/ml5/style_transfer_video/sketch.js" %}"></script>
+
+{% endblock %}
