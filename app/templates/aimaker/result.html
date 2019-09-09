@@ -1,0 +1,67 @@
+{% extends 'layout/_base.html' %}
+{% block title %}ボトラーAI{% endblock %}
+
+{% block content %}
+
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <h3>アップロードした画像は【{{ label }}】です。</h3>
+            <p>AIメーカーでは以下のように判定されました。</p>
+            <p id='status'></p>
+
+            <p></p>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+
+        <div class="col-sm-8">
+            <table class='table'>
+                <tbody>
+                    <tr>
+                        <td class="wd30">判定が正常に動作したか</td>
+                        <td>{{ state }}</td>
+                    </tr>
+                    <tr>
+                        <td>判定した結果は</td>
+                        <td>{{ label }}　でした。</td>
+                    </tr>
+                    <tr>
+                        <td>画像ファイル</td>
+                        <td><img class='preview-img' src={{ base64 }} style="width:40%;"></img></td>
+                    </tr>
+                    <tr>
+                        <td>推定される確率は</td>
+                        <td>{{ score }}です。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <a href="{% url 'aimaker' %}" class="btn btn-primary">画像選択メニューに戻る</a>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

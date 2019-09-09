@@ -1,0 +1,49 @@
+{% extends 'layout/_base.html' %}
+{% block title %}ボトラーAI{% endblock %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <h1>AIメーカーへのリクエスト</h1>
+            <p></p>
+            <p id='status'></p>
+
+            <p></p>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+
+        <form method="POST" action="{% url 'aimaker' %}" enctype="multipart/form-data" class="form-horizontal">
+            {% csrf_token %}
+            <div class='form-group'>
+                <div class="col-sm-8">
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary">分類する</button>
+                    <br />
+                </div>
+            </div>
+        </form>
+
+        <div class="col-sm-2">
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 
 from .views import ItemFilterView, ItemDetailView, ItemCreateView, ItemUpdateView, ItemDeleteView, FaceView
 from .views_top import TopIndexView
+from .aimaker.views import AiMakerView
 
 # アプリケーションのルーティング設定
 
@@ -13,7 +14,8 @@ urlpatterns = [
     path('', TopIndexView.as_view(), name='top'),
 
     # ml5.js
-    path('ml5/styletransfervideo',TemplateView.as_view(template_name='app/ml5/style_transfer_video.html'), name='style_transfer_video'),
+    path('ml5/styletransfervideo', TemplateView.as_view(
+        template_name='app/ml5/style_transfer_video.html'), name='style_transfer_video'),
 
     # 顔判定
     path('face/', FaceView.as_view(), name='face'),
@@ -24,4 +26,8 @@ urlpatterns = [
     path('data/update/<int:pk>/', ItemUpdateView.as_view(), name='update'),
     path('data/delete/<int:pk>/', ItemDeleteView.as_view(), name='delete'),
     path('data/', ItemFilterView.as_view(), name='index'),
+
+    # AIメーカー
+    path('aimaker/', AiMakerView.as_view(), name='aimaker'),
+
 ]
