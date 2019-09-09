@@ -1,57 +1,69 @@
-{% extends 'face/base.html' %}
+{% extends 'layout/_base.html' %}
 {% block content %}
-<div class="container">
 
+<div class="container my-3">
     <div class="row">
-            <div class="col-sm-12">
-                <div class="page-header">
-                    <h1>kerasで深層学習　<small>Gacktかオードリー春日のどちらかに分類してみる</small></h1>
-                </div>
-            </div>
-
-    </div>
-    <div class="row">
-            <div class="col-sm-2">
-            </div>
+        <div class="col-sm-2">
+        </div>
         <div class="col-sm-8">
-            <div style="padding:1em;">
-
-                <form method="POST" action="{% url 'face' %}" enctype="multipart/form-data" class="form-horizontal">
-                    {% csrf_token %}
-                    <div class='form-group'>
-                        <div class='col-sm-4'>{{form.as_p}}</div>
-                        <div class='col-sm-8'><button type="submit" class="btn btn-primary">分類する</button></div>
-                    </div>
-                </form>
-                <p class="message">判定画像</p>
-                <ul>
-                    {% if result_name != "" %}
-                    <li>{{ result_name }}</li>
-                    {% else %}
-                    <li>画像なし</li>
-                    {% endif %}
-                </ul>
-                <p class="message">判定結果</p>
-                <ol>
-                    {% if result_list %}
-                    {% for result in result_list %}
-                    <li>{{ result }}</li>
-                    {% endfor %}
-                    {% else %}
-                    <li>結果なし</li>
-                    {% endif %}
-                </ol>
-                <div class="image">
-                    {% if result_img != "" %}
-                    <img class="img-responsive" src="data:image/png;base64,{{result_img}}" />
-                    {% endif %}
-                </div>
-            </div>
+            <h3>kerasで深層学習</h3>
+            <p>Gacktかオードリー春日のどちらかに分類してみる</p>
         </div>
         <div class="col-sm-2">
         </div>
-
+    </div>
+    <div class="row my-3">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <form method="POST" action="{% url 'face' %}" enctype="multipart/form-data" class="form-horizontal">
+                {% csrf_token %}
+                <div class='form-group'>
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary">分類する</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <h5>判定画像</h5>
+            {% if result_list %}
+            {% for result in result_list %}
+            {{ result }}
+            {% endfor %}
+            {% else %}
+            結果なし
+            {% endif %}
+            <hr>
+            <h5>判定画像</h5>
+            {% if result_name != "" %}
+            {{ result_name }}
+            {% else %}
+            画像なし
+            {% endif %}
+            {% if result_img != "" %}
+            <br>
+            <img class="img-responsive" src="data:image/png;base64,{{result_img}}" />
+            {% endif %}
+            <hr>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <a href="{% url 'face' %}" class="btn btn-primary">画像選択メニューに戻る</a>
+        </div>
+        <div class="col-sm-2">
+        </div>
     </div>
 </div>
-</div>
+
 {% endblock %}
