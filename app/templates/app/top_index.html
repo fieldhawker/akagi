@@ -7,8 +7,10 @@
         </div>
         <div class="col-sm-8">
             <div class="list-group">
-                <a href="{% url 'style_transfer_video' %}" class="list-group-item list-group-item-action">StyleTransferVideo</a>
                 <a href="{% url 'face' %}" class="list-group-item list-group-item-action">Gacktかオードリー春日か顔判定</a>
+                <a href="{% url 'aimaker' %}" class="list-group-item list-group-item-action">AIメーカーへのリクエストによる瓶判定</a>
+                <a href="{% url 'style_transfer_video' %}"
+                    class="list-group-item list-group-item-action">StyleTransferVideo</a>
                 <a href="#" class="list-group-item list-group-item-action active">DUMMY</a>
                 <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1"
                     aria-disabled="true">DUMMY</a>
@@ -19,4 +21,4 @@
 
     </div>
 </div>
-    {% endblock %}
+{% endblock %}
